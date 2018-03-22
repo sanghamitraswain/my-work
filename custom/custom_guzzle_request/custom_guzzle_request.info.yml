@@ -1,0 +1,4 @@
+name: Custom Guzzle Request
+type: module
+description: 'Get a response code from any URL using Guzzle in Drupal 8!'
+core: 8.x

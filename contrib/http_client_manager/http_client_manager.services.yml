@@ -1,0 +1,17 @@
+services:
+  http_client_manager.http_services_api:
+    class: Drupal\http_client_manager\HttpServiceApiHandler
+    arguments: ["@app.root", "@module_handler", "@string_translation", "@controller_resolver", "@config.factory"]
+
+  http_client_manager.factory:
+    class: Drupal\http_client_manager\HttpClientManagerFactory
+    parent: container.trait
+
+  http_client_manager.client_base:
+    abstract: true
+    class: Drupal\http_client_manager\HttpClient
+    factory: http_client_manager.factory:get
+
+  http_client_manager.swagger:
+    class: Drupal\http_client_manager\HttpClientManagerSwagger
+    arguments: ["@http_client"]

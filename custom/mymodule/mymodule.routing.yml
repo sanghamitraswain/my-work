@@ -1,0 +1,7 @@
+mymodule.list:
+  path: '/response-data'
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\MymoduleController::getResponse'
+    _title: 'Response data'
+  requirements:
+    _permission: 'access content'

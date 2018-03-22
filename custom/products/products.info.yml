@@ -1,0 +1,5 @@
+name: 'Products'
+type: module
+description: 'Custom module for fetching products from external web service'
+core: 8.x
+package: custom

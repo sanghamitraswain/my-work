@@ -1,0 +1,10 @@
+services:
+  example_api.http_client:
+    parent: http_client_manager.client_base
+    arguments: ['example_services']
+
+  http_client_manager_example.subscriber:
+    class: Drupal\http_client_manager_example\EventSubscriber\HttpClientManagerExampleSubscriber
+    tags:
+      - { name: event_subscriber }
+
